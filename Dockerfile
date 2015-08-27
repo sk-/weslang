@@ -16,7 +16,7 @@
 
 FROM debian:sid
 
-RUN apt-get update && apt-get install -y git ant default-jdk gcc g++ zip
+RUN apt-get update && apt-get install -y git ant default-jdk gcc g++ zip python-dev
 RUN git clone --depth 1 https://github.com/facebook/buck.git buck
 COPY . weslang
 WORKDIR /buck
